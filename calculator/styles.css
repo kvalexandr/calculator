@@ -33,6 +33,26 @@ body {
   background-color: rgba(255, 255, 255, .9);
 }
 
+.calculator-grid > button.grey {
+  background-color: rgba(209, 205, 205, 0.75);
+}
+
+.calculator-grid > button.grey:hover {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.calculator-grid > button.blue {
+  background-color: rgba(194, 193, 248, 0.75);
+}
+
+.calculator-grid > button.blue:hover {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
 .output {
   grid-column: 1 / -1;
   background-color: rgba(0, 0, 0, .75);
