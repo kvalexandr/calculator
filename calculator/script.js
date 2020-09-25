@@ -24,10 +24,8 @@ class Calculator {
     if (this.currentOperand === '') return;
 
     if (operation === '√') {
-      this.previousOperand = 2;
       this.operation = operation;
       this.compute();
-      this.previousOperand = this.currentOperand;
     } else {
       if (this.previousOperand !== '') {
         this.compute();
@@ -67,17 +65,17 @@ class Calculator {
         break;
       case '√':
         computation = Math.sqrt(current);
-
         break;
       default:
         return;
     }
 
     this.clear();
-    this.currentOperand = +computation.toFixed(8);
+    this.currentOperand = isNaN(computation) ? 'error' : +computation.toFixed(8);
   }
 
   getDisplayNumber(number) {
+    if (number === 'error') return number;
     const stringNumber = number.toString();
     const integerDigits = parseFloat(stringNumber.split('.')[0]);
     const decimalDigits = stringNumber.split('.')[1];
@@ -136,6 +134,7 @@ operationButtons.forEach(button => {
 equalsButton.addEventListener('click', () => {
   calculator.compute();
   calculator.updateDisplay();
+  calculator.clear();
 });
 
 allClearButton.addEventListener('click', () => {
