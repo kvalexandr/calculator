@@ -12,11 +12,35 @@ body {
   background: linear-gradient(to right, #CCCCCC, #00FF6C);
 }
 
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 40px 60px;
+}
+
+.calculator {
+  width: 50%;
+  min-width: 500px;
+  margin-right: 20px;
+}
+
+.hint {
+  width: 50%;
+  max-width: 500px;
+  padding: 30px;
+  background-color: #fff;
+  color: #2F2F2F;
+}
+
 .calculator-grid {
   display: grid;
   justify-content: center;
   align-content: center;
-  min-height: 100vh;
   grid-template-columns: repeat(5, 100px);
   grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }

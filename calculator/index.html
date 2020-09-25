@@ -11,38 +11,51 @@
 </head>
 
 <body>
-  <div class="calculator-grid">
-    <div class="output">
-      <div data-previous-operand class="previous-operand"></div>
-      <div data-current-operand class="current-operand"></div>
+  <div class="wrapper">
+    <div class="calculator">
+      <div class="calculator-grid">
+        <div class="output">
+          <div data-previous-operand class="previous-operand"></div>
+          <div data-current-operand class="current-operand"></div>
+        </div>
+
+        <button data-all-clear class="grey span-two">AC</button>
+        <button data-delete class="grey span-three">DEL</button>
+
+        <button data-number data-value="1">1</button>
+        <button data-number data-value="2">2</button>
+        <button data-number data-value="3">3</button>
+        <button data-operation data-value="÷" class="grey">÷</button>
+        <button data-operation data-value="*" class="grey">&#215;</button>
+
+        <button data-number data-value="4">4</button>
+        <button data-number data-value="5">5</button>
+        <button data-number data-value="6">6</button>
+        <button data-operation data-value="+" class="grey">+</button>
+        <button data-operation data-value="-" class="grey">-</button>
+
+        <button data-number data-value="7">7</button>
+        <button data-number data-value="8">8</button>
+        <button data-number data-value="9">9</button>
+        <button data-operation data-value="^" class="grey">x<sup>y</sup></button>
+        <button data-operation data-value="√" class="grey">√</button>
+
+        <button data-sign>&plusmn;</button>
+        <button data-number data-value="0">0</button>
+        <button data-number data-value=".">.</button>
+        <button data-equals class="blue span-two">=</button>
+      </div>
     </div>
-
-    <button data-all-clear class="grey span-two">AC</button>
-    <button data-delete class="grey span-three">DEL</button>
-
-    <button data-number data-value="1">1</button>
-    <button data-number data-value="2">2</button>
-    <button data-number data-value="3">3</button>
-    <button data-operation data-value="÷" class="grey">÷</button>
-    <button data-operation data-value="*" class="grey">&#215;</button>
-
-    <button data-number data-value="4">4</button>
-    <button data-number data-value="5">5</button>
-    <button data-number data-value="6">6</button>
-    <button data-operation data-value="+" class="grey">+</button>
-    <button data-operation data-value="-" class="grey">-</button>
-
-    <button data-number data-value="7">7</button>
-    <button data-number data-value="8">8</button>
-    <button data-number data-value="9">9</button>
-    <button data-operation data-value="^" class="grey">x<sup>y</sup></button>
-    <button data-operation data-value="√" class="grey">√</button>
-
-    <button data-sign>&plusmn;</button>
-    <button data-number data-value="0">0</button>
-    <button data-number data-value=".">.</button>
-    <button data-equals class="blue span-two">=</button>
+    <div class="hint">
+      <h3>Инструкция</h3>
+      <p>Чтобы ввести отрицательное число нужно воспользоваться кнопкой &plusmn;. Например, сначала вводим 9 затем
+        кнопку &plusmn; и получаем -9.</p>
+      <p>Для возведения в степень сначала вводим число, которое хотим возвести в степень, например 2, затем жмем кнопку
+        x<sup>y</sup> После этого вводим число степени, например 3, и получаем 8</p>
+      <p>Для вычисления квадратного корня жмем число, например 9, затем жмем кнопку √ и получаем 3</p>
+    </div>
   </div>
+
 </body>
 
 </html>
